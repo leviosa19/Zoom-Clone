@@ -1,5 +1,5 @@
 const socket = io('/')
-const videoGrid = document.getElementById('video__grid')
+const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {
   path: '/peerjs',
   host: '/',
@@ -39,7 +39,7 @@ navigator.mediaDevices.getUserMedia({
 	}
 	});
 	socket.on("createMessage", message => {
-		$("ul").append(`<li class="message"><p><span class='userName'>User</span><br/>${message}</p></li>`);
+		$("ul").append(`<li class="message"><b>user</b><br/>${message}</li>`);
 		scrollToBottom()
 	})
 })
@@ -103,7 +103,7 @@ const playStop = () => {
 	setPlayVideo()
   } else {
 	setStopVideo()
-	// videoGrid.src = "https://www.w3schools.com/tags/movie.mp4"
+	videoGrid.src = "https://www.w3schools.com/tags/movie.mp4"
     myVideoStream.getVideoTracks()[0].enabled = true;
   }
 }
