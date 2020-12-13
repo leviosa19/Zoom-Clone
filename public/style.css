@@ -1,110 +1,4 @@
-* {
-    margin: 0;
-}
-
-@media only screen and (max-width: 722px) {
-
-    .main__right {
-        display: none !important;
-    }
-
-    .main {
-        display: flex;
-        height: 100vh;
-        width: 100wh;
-    }
-
-    .main__left {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .main__videos {
-        height: 80vh;
-        flex-direction: column;
-        flex: 0.8;
-        
-        flex-grow: 1;
-        background-color: wheat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-    }
-
-    .video-grid {
-        display: flex;
-        justify-content: center;
-        
-    }
-
-    video:nth-child(1) {
-        object-fit: cover;
-        height: 70vh !important;
-    }
-
-    video:nth-child(2) {
-        object-fit: cover;
-        height: 30vh !important;
-        
-    }
-
-    .main__controls {
-        background-color: black;
-        color: #D2D2D2;
-        display: flex;
-        justify-content: space-between;
-        padding: 5px;
-        /* bottom: 0; */
-    }
-
-    .main__controls__block {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex: 1;
-    }
-
-    .main__controls__button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 8px 10px;
-        min-width: 80px;
-        cursor: pointer;
-    }
-
-    .main__controls__button:hover {
-        background-color: #343434;
-        border-radius: 5px;
-    }
-
-    .main__controls__button i {
-        font-size: 24px;
-    }
-
-    .other {
-        display: none !important;
-    }
-
-}
-
-#video__grid {
-    display: flex;
-    justify-content: center;
-}
-
-video {
-    height: 300px ;
-    width: 400px ;
-    object-fit: cover;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
 .main {
-    /* display: block; */
     height: 100vh;
     display: flex;
 }
@@ -121,7 +15,7 @@ video {
 
 .main__videos {
     flex-grow: 1;
-    background-color: wheat;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
