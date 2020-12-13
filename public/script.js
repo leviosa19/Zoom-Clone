@@ -38,7 +38,7 @@ navigator.mediaDevices.getUserMedia({
 		}
 	});
 	socket.on("createMessage", message => {
-		$("ul").append(`<li class="message"><b>user</b><br/>${message}</li>`);
+		$("ul").append(`<li class="message"><p><span class='UserName'>user</span><br/>${message}</p></li>`);
 		scrollToBottom()
 	})
 })
@@ -100,10 +100,10 @@ const playStop = () => {
 	if (enabled) {
 		myVideoStream.getVideoTracks()[0].enabled = false;
 		setPlayVideo()
-		console.log("Video is ON")
+		console.log("Video is OFF")
 	} else {
 		setStopVideo()
-		console.log("Video is OFF")
+		console.log("Video is ON")
 		myVideoStream.getVideoTracks()[0].enabled = true;
 	}
 }
