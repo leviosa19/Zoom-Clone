@@ -52,6 +52,7 @@ myPeer.on('open', id => {
 })
 
 function connectToNewUser(userId, stream) {
+	console.log("User connected: " + userId)
 	const call = myPeer.call(userId, stream)
 	const video = document.createElement('video')
 	call.on('stream', userVideoStream => {
@@ -59,6 +60,7 @@ function connectToNewUser(userId, stream) {
 	})
 	call.on('close', () => {
 		video.remove()
+		console.log("User Disconnectd: " + userId)
 	})
 
 	peers[userId] = call
@@ -85,20 +87,23 @@ const muteUnmute = () => {
 	if (enabled) {
 		myVideoStream.getAudioTracks()[0].enabled = false;
 		setUnmuteButton();
+		console.log("Unmuted")
 	} else {
 		setMuteButton();
+		console.log("Muted")
 		myVideoStream.getAudioTracks()[0].enabled = true;
 	}
 }
 
 const playStop = () => {
-	console.log('object')
 	let enabled = myVideoStream.getVideoTracks()[0].enabled;
 	if (enabled) {
 		myVideoStream.getVideoTracks()[0].enabled = false;
 		setPlayVideo()
+		console.log("Video is ON")
 	} else {
 		setStopVideo()
+		console.log("Video is OFF")
 		myVideoStream.getVideoTracks()[0].enabled = true;
 	}
 }
