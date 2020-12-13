@@ -18,10 +18,10 @@ app.use(express.static('public'));
 app.use(cors())
 
 app.get('/', (req, res) => {
-	res.redirect("/room-id?" + uuidv4())
+	res.redirect("/" + uuidv4())
 })
 
-app.get("/room-id?:room", (req, res) => {
+app.get("/:room", (req, res) => {
 	res.render('index', { roomId: req.params.room })
 })
 
