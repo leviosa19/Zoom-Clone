@@ -19,7 +19,7 @@
     - Add mute button
     - Add stop video button
 
-# Deploy
+# Deploy on Heroku
 1. npm i -g heroku
 2. heroku git:clone -a zoom-mern
 3. git init
