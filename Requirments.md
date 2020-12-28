@@ -1,6 +1,6 @@
 # Steps need to create zoom clone
 
-    - Initialize our NodeJS project 
+    - Initialize our NodeJS project
         - npm i init
     - Initialize our first view
         - npm i express
@@ -20,6 +20,7 @@
     - Add stop video button
 
 # Deploy on Heroku
+
 1. npm i -g heroku
 2. heroku git:clone -a zoom-mern
 3. git init
